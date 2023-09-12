@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../../../core/widgets/custom_error_message.dart';
 import '../../../../../core/widgets/custom_shimmer_widget.dart';
 import '../../../../home/presentation/view/widgets/book_list_view_item.dart';
@@ -30,7 +29,8 @@ class SearchListViewBuilder extends StatelessWidget {
           return const ShimmerWidgetSeparator();
         } else {
           return const CustomErrorMessage(
-              errMessage: 'Search to Free Book By Samir Magdy');
+            errMessage: 'Search to Free Books By Samir Magdy',
+          );
         }
       },
     );

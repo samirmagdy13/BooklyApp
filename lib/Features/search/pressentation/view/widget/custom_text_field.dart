@@ -28,7 +28,7 @@ class CustomTtextField extends StatelessWidget {
         ),
         border: outlineInputBorder(),
         enabledBorder: outlineInputBorder(),
-        focusedBorder: outlineInputBorder(Colors.red),
+        focusedBorder: outlineInputBorder(Colors.teal),
       ),
     );
   }
