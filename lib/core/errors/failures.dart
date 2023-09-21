@@ -22,13 +22,11 @@ class ServerFailure extends Failures {
         return ServerFailure(errMessage: 'Send timeout with ApiServer');
       case DioExceptionType.cancel:
         return ServerFailure(errMessage: 'Request to ApiServer was canceld');
-
+      case DioExceptionType.unknown:
+        return ServerFailure(errMessage: 'No Internet Connection');
       case DioExceptionType.badResponse:
         return ServerFailure.fromResponse(
             dioException.response!.statusCode, dioException.response!.data);
-
-      case DioExceptionType.unknown:
-        return ServerFailure(errMessage: 'No Internet Connection');
 
       default:
         return ServerFailure(
